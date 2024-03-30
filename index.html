@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
+<link rel="shortcut icon" type="image/x-icon" href="/chart-column-solid.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/fontawesome.css" />
+<link rel="stylesheet" href="css/bootstrap.css" />
+<link rel="stylesheet" href="css/style.css" />
+<title>Login</title>
+
+<style>
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+ 
+/* .container {
+    background-color: #fff;
+    width: 400px;
+    padding: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    text-align: center;
+} */
+
+.container {
+    background-color: rgb(4, 168, 158); /* Your desired color */
+    width: 400px;
+    padding: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    text-align: center;
+}
+ 
+label{
+    color:white
+}
+ 
+h1 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+header h1{
+    color: white;
+}
+ 
+.form-group {
+    margin-bottom: 20px;
+}
+ 
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+}
+ 
+button[type="submit"] {
+    background-color: #007bff; 
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+ 
+button[type="submit"]:hover {
+    background-color: #0056b3; 
+}
+</style>
+</head>
+<body>
+    <header style="background-color: rgb(4 168 158) !important;
+    position: absolute;
+    top: 0px;
+    width: 100%; background-color: rgb(4 168 158) !important;" class="bg-primary
+    d-sm-flex justify-content-between align-items-center text-white text-center py-2 px-5">
+ <h1><i class="fa-solid fa-chart-column"></i> NutriSense</h1>
+</header>
+<div class="container">
+<h1>Login</h1>
+ 
+        <form id="login-form">
+<div class="form-group">
+<label for="username">Username:</label>
+<input type="text" id="username" name="username" required>
+</div>
+<div class="form-group">
+<label for="password">Password:</label>
+<input type="password" id="password" name="password" required>
+</div>
+<button type="submit">Login</button>
+</form>
+</div>
+ 
+    <script>
+        const loginForm = document.getElementById('login-form');
+ 
+ loginForm.addEventListener('submit', (event) => {
+     event.preventDefault(); // Prevent default form submission
+  
+     window.location.href = "/main.html";
+     // TODO: Add the logic to handle the form submission 
+     // This would involve collecting user credentials, and ideally sending
+     // them to your server for authentication. 
+ });
+    </script>
+</body>
+</html>
